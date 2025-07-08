@@ -1,0 +1,14 @@
+###############################################################################
+# Bazel now uses Bzlmod by default to manage external dependencies.
+# Please consider migrating your external dependencies from WORKSPACE to MODULE.bazel.
+#
+# For more details, please check https://github.com/bazelbuild/bazel/issues/18958
+###############################################################################
+module(
+    name = "clean_architecture_ios",
+    version = "1.0",
+)
+
+bazel_dep(name = "rules_swift", version = "3.0.2")
+bazel_dep(name = "rules_apple", version = "4.0.1")
+bazel_dep(name = "rules_xcodeproj", version = "3.0.0")
